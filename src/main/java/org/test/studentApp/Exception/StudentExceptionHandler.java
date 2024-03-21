@@ -4,22 +4,27 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import org.test.studentApp.dto.ResponseStrucutre;
+import org.test.studentApp.dto.ResponseStructure;
 import org.test.studentApp.util.ApplicationConstant;
 
 @RestControllerAdvice
 public class StudentExceptionHandler {
 
 	@ExceptionHandler(StudentException.class)
-	public ResponseEntity<ResponseStrucutre<String>> hanldeSE(StudentException exception){
+	public ResponseEntity<ResponseStructure<String>> hanldeSE(StudentException exception){
 		
-		ResponseStrucutre<String> strucutre = new ResponseStrucutre<>();
+		ResponseStructure<String> structure
+ = new ResponseStructure<>();
 		
-		strucutre.setData(exception.getMessage());
-		strucutre.setMessage(ApplicationConstant.NOT_FOUND);
-		strucutre.setStatusCode(HttpStatus.NOT_FOUND.value());
+		structure
+.setData(exception.getMessage());
+		structure
+.setMessage(ApplicationConstant.NOT_FOUND);
+		structure
+.setStatusCode(HttpStatus.NOT_FOUND.value());
 		
-		return new ResponseEntity<ResponseStrucutre<String>>(strucutre,HttpStatus.NOT_FOUND);
+		return new ResponseEntity<ResponseStructure<String>>(structure
+,HttpStatus.NOT_FOUND);
 		
 	}
 	
