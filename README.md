@@ -1,5 +1,6 @@
 Student Mongo App
-This project is a simple CRUD (Create, Read, Update, Delete) application built with Spring Boot and MongoDB. It allows users to manage student data by performing basic operations like adding, viewing, updating, and deleting student information.
+This project is a simple CRUD (Create, Read, Update, Delete) application built with Spring Boot and MongoDB. 
+It allows users to manage student data by performing basic operations like adding, viewing, updating, and deleting student information.
 
 Features
 Create: Add a new student to the MongoDB database.
